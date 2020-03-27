@@ -6,6 +6,7 @@ It can be played running `python3 main.py` or `python main.py`
 
 You need to have a python 3 enviroment set up.
 You can get Python at https://www.python.org/downloads/
+
 if you are new to progamming see [Python's Getting Started Guide](https://www.python.org/about/gettingstarted/)
 I recommend Timothy as a starter python IDE, you can also use VScode and Atom.
 
