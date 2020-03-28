@@ -2,7 +2,7 @@
 Simple python text-based adventure erotic game (NSFW)
 
 
-****           *   *                         ***** *     **                                        * ***                                                 
+`****           *   *                         ***** *     **                                        * ***                                                 
  *  *************  **                       ******  **    **** *                                   *  ****                                           *     
 *     *********    **                      **   *  * **    ****                                   *  *  ***                                         **     
 *     *  *         **                     *    *  *  **    * *                                   *  **   ***                                        **     
@@ -20,7 +20,7 @@ Simple python text-based adventure erotic game (NSFW)
                           *               *                                                                **                                              
                          *                 **                                                              *                                               
                         *                                                                                 *                                                
-                       *                                                                                 *                                                 
+                       *                                                                                 *`                                                 
 
 The games has 3 main routes with various branches.
 It can be played running `python3 main.py` or `python main.py`
