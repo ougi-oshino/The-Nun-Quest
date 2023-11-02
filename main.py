@@ -1,9 +1,5 @@
 import time #Imports a module to add a pause
 import sys
-from colorama import init
-init(strip=not sys.stdout.isatty()) # strip colors if stdout is redirected
-from termcolor import cprint 
-from pyfiglet import figlet_format
 
 #This defines the reply options
 reply_A = ["A", "a"]
@@ -13,73 +9,68 @@ continue_text = [""]
 yes = ["Y", "y", "yes"]
 no = ["N", "n", "no"]
 
+
 #Grabbing objects
 condom = 0
 dildo = 0
+finger = 0
+mouth = 0
 
 required = ("\nUse only A, B, or C\n") #Cutting down on duplication
 
-def gpl():
-    print("""The Nun Quest  Copyright (C) 2020  ougi-oshino (github.com/ougi-oshino)
-    This progam is licensed under the Gnu General Public License Version 3.
-    This program comes with ABSOLUTELY NO WARRANTY; for details see LICENSE file
-    This is free software, and you are welcome to redistribute it
-    under certain conditions; see LICENSE file. Fonts by Figlet.""")
+print('Welcome to Slutty Quest!')  # remeber to add stylish font
+print('What is the size of your peepee?') # ask for their deek/veejay size
+slut = input()
+print('Get ready for a mindblowing handjob, ' + slut)
+print('The wirth of your peepee:')
+print(len(slut))
+print('What is your sexual fantasy?') # ask for their fantasy
+booba = input()
+print(' You shall be ' + str(int(booba) + 1) + ' booby-mitized')
+77
+def intro():
     
     choice = input("\nProceed")
     if choice in continue_text:
         intro()
     else:
         intro()
-    time.sleep(1)    
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-def startscreen():
-
-    cprint(figlet_format('The Nun Quest', font='caligraphy'),
-       'green', attrs=['bold'])
+    time.sleep(1) 
     
-    choice = input("\nPress A to start! Press B to see license.\n\n")
-    if choice in reply_A:   
-        intro()
-    elif choice in reply_B:    
-        gpl()
-    else:
-        print(required)
-        startscreen()
-        time.sleep(1)
-        
-#The story is broken into sections, starting with "intro"
-def intro():
-   print ("After a drunken night out with friends, you awaken the ")
-   print("next morning in a giant , abandonend church in a forest.")
-   time.sleep(1)
-   print("Head spinning and fighting the urge to vomit, you stand and marvel at your new, ")
-   print("unfamiliar setting. The peace quickly fades when you hear a ")
-   time.sleep(1)
-   print("cute sound emitting behind you. A cute nun is ")
-   print("sleeping towards you. You will:")
-   time.sleep(1)
-   print ("""  A. Wake her and talk to her 
-  B. Pick her up and run to your house (pick this for true ending and a very nice sex scene)
-  C. Rape her right there""")
-   choice = input(">>> ") #Here is your first choice.
-   if choice in reply_A:
-       option_wake()
-   elif choice in reply_B:
-       option_house()
-   elif choice in reply_C:
+def start():
+    print('Slutty Quest', font='caligraphy''green', attrs=['bold'])
+    
+    print ("After a drunken night out with friends, you awaken the ")
+    print("next morning in a giant , abandonend church in a forest.")
+    time.sleep(1)
+    print("Head spinning and fighting the urge to vomit, you stand and marvel at your new, ")
+    print("unfamiliar setting. The peace quickly fades when you hear a ")
+    time.sleep(1)
+    print("cute sound emitting behind you. A cute nun is ")
+    print("sleeping towards you. You will:")
+    time.sleep(1)
+    print ("""  A. Wake her and talk to her 
+                B. Pick her up and run to your house (pick this for true ending and a very nice sex scene)
+                C. Rape her right there""")
+    choice = input(">>> ") #Here is your first choice.
+    if choice in reply_A:
+        option_wake()
+    elif choice in reply_B:
+        option_house()
+    elif choice in reply_C:
            option_rape()
-   else:
-        print (required)
-        intro()
+    else:
+         print (required)
+         intro()
+         
 def option_house():
    time.sleep(1)
    print ("\nThe nun gets startled by getting picked up suddenly, As she was about to scream, "
    "you see a guard. Will you:")
   
    print ("""A. make her shut up and hide
-  B. Put her in the ground, ask her to stay calm and make she follow you (pick this for true ending and a very nice sex scene)
-  C. Run towards a nearby alley""")
+             B. Put her in the ground, ask her to stay calm and make she follow you (pick this for true ending and a very nice sex scene)
+             C. Run towards a nearby alley""")
    choice = input(">>> ")
    if choice in reply_A:
     option_hide()
@@ -106,30 +97,28 @@ def option_alley():
   print ("\nWhat do you do next?")
   
   print ("""  A. Hide in silence
-  B. Rape her!
-  C. Run""")
+              B. Rape her!
+              C. Run""")
   choice = input(">>> ")
   if choice in reply_A:
     print ("\nYou hide in dark, the guard that heard the nun's scream "
-    "pass by, but "
-    "Another guard notices you there, so...\n\nYou were Caught!")
+            "pass by, but "
+            "Another guard notices you there, so...\n\nYou were Caught!")
     option_caught()
   elif choice in reply_B:
    if condom > 0:
     print ("\nAt this point you just don't care about anything anymore "
-    "you just want to rape that nun! \n\nYou are a Rapist!")
+           "you just want to rape that nun! \n\nYou are a Rapist!")
     option_rapist()
    else: #If the user didn't grab the condom
      print ("\nYou should have picked up that condom. She's was possesed by a witch! "
-     "\n\nYou died!")
+            "\n\nYou died!")
   elif choice in reply_C:
     print ("You continue to run with the nun and then you find a way out.")
     option_town()
   else:
     print (required)
     option_caught()
-
-
     
 def option_town():
   time.sleep(1)
@@ -163,7 +152,7 @@ def option_town():
      print ("\nMaybe you should have picked up the dildo. "
      "\n\nYou were caught!")
      option_caught()
-     
+    
 def option_caught():
     time.sleep(1)
     print ("\nThe guards catch and you are senteced to prison with rapist orcs in your cell!\n\nASS RAPED ENDING")
@@ -207,7 +196,7 @@ def option_wake():
           "a church member.")
     time.sleep(1)
     print("CHRISTIAN ENDING")
-
+    
 def option_hide():
     time.sleep(1)
     print("\nAs you were hiding with her, you rethink your actions ")
@@ -216,7 +205,7 @@ def option_hide():
     time.sleep(1)       
     print("\nShe forgives you!")
     print("THINKER ENDING!\n\n")
-
+    
 def option_calm():
     time.sleep(1)
     print("\nThe nun calms down and decides to follow you ")
@@ -257,7 +246,7 @@ def sex_intro():
     else:
        sex_blowjob()
     time.sleep(1)
-           
+    
 def sex_blowjob():
     time.sleep(1)
     print("\nAs you ask her for a blowjob, you remember")
@@ -271,7 +260,7 @@ def sex_blowjob():
     else:
          blowjob()   
     time.sleep(1)
-           
+    
 def blowjob():
     time.sleep(1)
     print("\nShe gently started licking the back of your")
@@ -325,7 +314,7 @@ def sex():
     else:
         true_ending
     time.sleep(1)
-           
+    
 def true_ending():
     time.sleep(1)
     print("\nAfter that you were going to get married.")
@@ -341,17 +330,12 @@ def true_ending():
     else:
         true()
     time.sleep(1)
-
+    
 def true():  
-   time.sleep(1)
-   print("\nTRUE ENDING!!!\n\n")
-   time.sleep(1)
-   print("Thanks for Playing!")
-   print("Made by Ougi-Oshino.")
-   print("See license file for more info.")
-          
+  time.sleep(1)
+  print("\nTRUE ENDING!!!\n\n")
+  time.sleep(1)
+  print("Thanks for Playing!")
+  print("Made by S0mt0chukwu.")
+  print("Made by Ougi-Oshino.")
     
-    
-    
-
-startscreen()
